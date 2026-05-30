@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ — Blog, Careers & Press</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="back.css">
+    <script src="back.js"></script>
+
+
+<base target="_blank">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+    <a href="#" class="logo">B<span class="logo-dot">B</span>Q</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="header-nav" id="headerNav">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="reserve.html">Reserve</a></li>
+        <li><a href="#" class="active">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</header>
+
+<!-- ── HERO ── -->
+<div class="page-hero">
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="ring ring-3"></div>
+    <div class="ring ring-4"></div>
+
+    <span class="hero-tag"><i class="ti ti-flame"></i> Stay in the Loop</span>
+    <h1>Stories, Careers<br><em>& Headlines</em></h1>
+    <p>From the grill to the front page — discover what makes BBQ Flame the hottest table in Lagos.</p>
+</div>
+
+<!-- ── TABS ── -->
+<div class="tabs-wrap">
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('blog', this)">
+            <i class="ti ti-article"></i> Blog
+        </button>
+        <button class="tab" onclick="switchTab('careers', this)">
+            <i class="ti ti-briefcase"></i> Careers
+        </button>
+        <button class="tab" onclick="switchTab('press', this)">
+            <i class="ti ti-news"></i> Press
+        </button>
+    </div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div class="main-wrap">
+
+    <!-- BLOG SECTION -->
+    <div class="section-panel active" id="panel-blog">
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-img">
+                    <img src="download.jfif">
+                    <span class="blog-badge">Recipe</span>
+                    <i class="ti ti-flame"></i>
+                </div>
+                <div class="blog-body">
+                    <div class="blog-meta">
+                        <span><i class="ti ti-calendar"></i> May 15, 2026</span>
+                        <span><i class="ti ti-clock"></i> 5 min read</span>
+                    </div>
+                    <h3>The Secret to Our Signature Smoked Ribs</h3>
+                    <p>Our head pitmaster reveals the 12-hour low-and-slow technique that makes our ribs fall-off-the-bone tender every single time.</p>
+                    <a href="#" class="read-more">Read Article <i class="ti ti-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img" style="background:linear-gradient(135deg, #8B4513, #D2691E);">
+                    <img src="download (2).jfif">
+                    <span class="blog-badge">Behind the Scenes</span>
+                    <i class="ti ti-tools-kitchen-2"></i>
+                </div>
+                <div class="blog-body">
+                    <div class="blog-meta">
+                        <span><i class="ti ti-calendar"></i> May 8, 2026</span>
+                        <span><i class="ti ti-clock"></i> 7 min read</span>
+                    </div>
+                    <h3>A Day in the Life of a Lagos grilled chicken</h3>
+                    <p>4:00 AM starts, wood selection rituals, and the art of fire management — follow Chef Ade through a typical day at the grill.</p>
+                    <a href="#" class="read-more">Read Article <i class="ti ti-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img" style="background:linear-gradient(135deg, var(--red), #ff6b6b);">
+                     <img src="download (3).jfif">
+                    <span class="blog-badge">Events</span>
+                    <i class="ti ti-confetti"></i>
+                </div>
+                <div class="blog-body">
+                    <div class="blog-meta">
+                        <span><i class="ti ti-calendar"></i> April 28, 2026</span>
+                        <span><i class="ti ti-clock"></i> 4 min read</span>
+                    </div>
+                    <h3>BBQ Flame Hosts Lagos Food Festival 2026</h3>
+                    <p>We brought the heat to Tafawa Balewa Square with over 5,000 attendees tasting our exclusive festival-only menu.</p>
+                    <a href="#" class="read-more">Read Article <i class="ti ti-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img" style="background:linear-gradient(135deg, #2c5f2d, #97bc62);">
+                     <img src="This Rolling Grill Basket Makes BBQ Veggies Easy (No More Falling Through the Grates).jfif">
+                    <span class="blog-badge">Sustainability</span>
+                    <i class="ti ti-leaf"></i>
+                </div>
+                <div class="blog-body">
+                    <div class="blog-meta">
+                        <span><i class="ti ti-calendar"></i> April 15, 2026</span>
+                        <span><i class="ti ti-clock"></i> 6 min read</span>
+                    </div>
+                    <h3>Our Farm-to-Flame Sustainability Journey</h3>
+                    <p>How we partner with local Nigerian farms to source the freshest produce while reducing our carbon footprint.</p>
+                    <a href="#" class="read-more">Read Article <i class="ti ti-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img" style="background:linear-gradient(135deg, #4a1c1c, #8b3a3a);">
+                     <img src="download (4).jfif">
+                    <span class="blog-badge">Culture</span>
+                    <i class="ti ti-glass-full"></i>
+                </div>
+                <div class="blog-body">
+                    <div class="blog-meta">
+                        <span><i class="ti ti-calendar"></i> April 2, 2026</span>
+                        <span><i class="ti ti-clock"></i> 8 min read</span>
+                    </div>
+                    <h3>The Perfect Pair: Nigerian Craft Beer & BBQ</h3>
+                    <p>Exploring the rising craft beer scene in Lagos and which brews complement our smoky flavors best.</p>
+                    <a href="#" class="read-more">Read Article <i class="ti ti-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img" style="background:linear-gradient(135deg, #1a1a2e, #16213e);">
+                     <img src="download (1).jfif">
+                    <span class="blog-badge">Tips</span>
+                    <i class="ti ti-meat"></i>
+                </div>
+                <div class="blog-body">
+                    <div class="blog-meta">
+                        <span><i class="ti ti-calendar"></i> March 20, 2026</span>
+                        <span><i class="ti ti-clock"></i> 5 min read</span>
+                    </div>
+                    <h3>5 Grilling Mistakes Every Beginner Makes</h3>
+                    <p>Avoid these common pitfalls and impress your friends at your next backyard cookout with pro-level techniques.</p>
+                    <a href="#" class="read-more">Read Article <i class="ti ti-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- CAREERS SECTION -->
+    <div class="section-panel" id="panel-careers">
+        <div class="careers-intro">
+            <h2>Join the <em>Flame</em></h2>
+            <p>We're building a team as passionate about great food and hospitality as we are. If you thrive in fast-paced environments and love making people smile, we want to hear from you.</p>
+        </div>
+
+        <div class="job-list">
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Head Pitmaster</h3>
+                    <div class="job-tags">
+                        <span class="job-tag">Full-time</span>
+                        <span class="job-tag">Senior</span>
+                        <span class="job-tag red">Urgent</span>
+                    </div>
+                    <p class="job-desc">Lead our grill station, manage smoke programs, train junior cooks, and maintain our award-winning BBQ standards. Minimum 5 years experience in smokehouse or BBQ kitchen required.</p>
+                </div>
+                <div class="job-action">
+                    <span class="job-salary">₦450k – ₦600k /mo</span>
+                    <button class="btn-apply"><i class="ti ti-send"></i> Apply Now</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Restaurant Manager</h3>
+                    <div class="job-tags">
+                        <span class="job-tag">Full-time</span>
+                        <span class="job-tag">Management</span>
+                    </div>
+                    <p class="job-desc">Oversee daily operations, manage a team of 25+ staff, ensure exceptional guest experiences, and drive revenue growth. Strong leadership and P&L management experience essential.</p>
+                </div>
+                <div class="job-action">
+                    <span class="job-salary">₦350k – ₦500k /mo</span>
+                    <button class="btn-apply"><i class="ti ti-send"></i> Apply Now</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Sous Chef</h3>
+                    <div class="job-tags">
+                        <span class="job-tag">Full-time</span>
+                        <span class="job-tag">Mid-level</span>
+                    </div>
+                    <p class="job-desc">Support the Head Chef in menu development, kitchen operations, and quality control. Creative flair and ability to work under pressure in a high-volume environment.</p>
+                </div>
+                <div class="job-action">
+                    <span class="job-salary">₦200k – ₦280k /mo</span>
+                    <button class="btn-apply"><i class="ti ti-send"></i> Apply Now</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Front of House Supervisor</h3>
+                    <div class="job-tags">
+                        <span class="job-tag">Full-time</span>
+                        <span class="job-tag">Supervisory</span>
+                    </div>
+                    <p class="job-desc">Lead our service team during shifts, handle guest relations, coordinate with kitchen, and ensure smooth service flow. Excellent communication skills required.</p>
+                </div>
+                <div class="job-action">
+                    <span class="job-salary">₦150k – ₦200k /mo</span>
+                    <button class="btn-apply"><i class="ti ti-send"></i> Apply Now</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Mixologist / Bartender</h3>
+                    <div class="job-tags">
+                        <span class="job-tag">Full-time</span>
+                        <span class="job-tag">Creative</span>
+                    </div>
+                    <p class="job-desc">Craft signature cocktails, manage bar inventory, and create memorable drink experiences that pair perfectly with our BBQ menu. Cocktail competition experience is a plus.</p>
+                </div>
+                <div class="job-action">
+                    <span class="job-salary">₦120k – ₦180k /mo</span>
+                    <button class="btn-apply"><i class="ti ti-send"></i> Apply Now</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Marketing & Social Media Intern</h3>
+                    <div class="job-tags">
+                        <span class="job-tag">Internship</span>
+                        <span class="job-tag">Entry-level</span>
+                    </div>
+                    <p class="job-desc">Assist with content creation, social media management, event photography, and brand campaigns. Perfect for creative students or recent graduates passionate about food media.</p>
+                </div>
+                <div class="job-action">
+                    <span class="job-salary">₦50k – ₦70k /mo</span>
+                    <button class="btn-apply"><i class="ti ti-send"></i> Apply Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="ti ti-medical-cross"></i></div>
+                <h4>Health Insurance</h4>
+                <p>Full medical coverage for you and your immediate family.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="ti ti-tools-kitchen-2"></i></div>
+                <h4>Staff Meals</h4>
+                <p>Enjoy complimentary meals during every shift you work.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="ti ti-school"></i></div>
+                <h4>Training</h4>
+                <p>Continuous professional development and certification support.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="ti ti-pig-money"></i></div>
+                <h4>Performance Bonus</h4>
+                <p>Quarterly bonuses based on individual and team performance.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="ti ti-calendar-stats"></i></div>
+                <h4>Paid Leave</h4>
+                <p>21 days annual leave plus public holidays and sick leave.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="ti ti-trending-up"></i></div>
+                <h4>Growth Path</h4>
+                <p>Clear promotion tracks from entry-level to management.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRESS SECTION -->
+    <div class="section-panel" id="panel-press">
+        <div class="press-intro">
+            <h2>In the <em>Spotlight</em></h2>
+            <p>BBQ Flame has been featured in leading publications across Nigeria and beyond. Here's what the press is saying about us.</p>
+            <a href="#" class="press-kit-btn"><i class="ti ti-download"></i> Download Press Kit</a>
+        </div>
+
+        <div class="press-stats">
+            <div class="stat-card">
+                <strong>47</strong>
+                <span>Media Features</span>
+            </div>
+            <div class="stat-card">
+                <strong>12</strong>
+                <span>Awards Won</span>
+            </div>
+            <div class="stat-card">
+                <strong>2.4M</strong>
+                <span>Social Reach</span>
+            </div>
+            <div class="stat-card">
+                <strong>4.9★</strong>
+                <span>Avg. Rating</span>
+            </div>
+        </div>
+
+        <div class="press-grid">
+            <div class="press-card">
+                <div class="press-header">
+                    <div class="press-logo">CN</div>
+                    <span class="press-date">March 2026</span>
+                </div>
+                <h3>"The Best BBQ Restaurant in Lagos Right Now"</h3>
+                <p>Culture Nigeria names BBQ Flame as the top destination for smoked meats in the city, praising our innovative fusion of traditional techniques with local flavors.</p>
+                <a href="#" class="press-link">Read Feature <i class="ti ti-external-link"></i></a>
+            </div>
+
+            <div class="press-card">
+                <div class="press-header">
+                    <div class="press-logo" style="background:#fdeaea; color:var(--red);">TN</div>
+                    <span class="press-date">February 2026</span>
+                </div>
+                <h3>"How BBQ Flame is Redefining Nigerian Dining"</h3>
+                <p>The NATIVE explores our founder's vision of elevating street-food BBQ into a world-class dining experience that celebrates Nigerian culinary heritage.</p>
+                <a href="#" class="press-link">Read Feature <i class="ti ti-external-link"></i></a>
+            </div>
+
+            <div class="press-card">
+                <div class="press-header">
+                    <div class="press-logo" style="background:#e8f4fd; color:#2980b9;">BI</div>
+                    <span class="press-date">January 2026</span>
+                </div>
+                <h3>"Inside the ₦50M Restaurant That Started as a Street Grill"</h3>
+                <p>Business Insider Africa covers our entrepreneurial journey from a single roadside grill to one of Lagos's most sought-after reservations.</p>
+                <a href="#" class="press-link">Read Feature <i class="ti ti-external-link"></i></a>
+            </div>
+
+            <div class="press-card">
+                <div class="press-header">
+                    <div class="press-logo" style="background:#f3e8fd; color:#8e44ad;">EA</div>
+                    <span class="press-date">December 2025</span>
+                </div>
+                <h3>"Lagos Food Scene: 10 Restaurants to Watch in 2026"</h3>
+                <p>Eatwell Africa includes BBQ Flame in their annual list of rising culinary stars, highlighting our commitment to sustainability and local sourcing.</p>
+                <a href="#" class="press-link">Read Feature <i class="ti ti-external-link"></i></a>
+            </div>
+
+            <div class="press-card">
+                <div class="press-header">
+                    <div class="press-logo" style="background:#e8fdf3; color:#27ae60;">GA</div>
+                    <span class="press-date">November 2025</span>
+                </div>
+                <h3>"Award Winner: Best New Restaurant 2025"</h3>
+                <p>The Guardian Nigeria presents us with the Best New Restaurant award, recognizing our rapid rise and consistent quality since opening day.</p>
+                <a href="#" class="press-link">Read Feature <i class="ti ti-external-link"></i></a>
+            </div>
+
+            <div class="press-card">
+                <div class="press-header">
+                    <div class="press-logo" style="background:#fdf6e8; color:#d35400;">CC</div>
+                    <span class="press-date">October 2025</span>
+                </div>
+                <h3>"Chef's Table: Interview with Head Pitmaster Adeoluwa"</h3>
+                <p>Creative Cookery sits down with our head chef to discuss fire, flavor, and the future of BBQ in West Africa.</p>
+                <a href="#" class="press-link">Read Feature <i class="ti ti-external-link"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter">
+        <h3>Never Miss an Update</h3>
+        <p>Subscribe for the latest blog posts, job openings, and press features delivered to your inbox.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+</div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#" class="logo">B<span>B</span>Q</a>
+                <p>Connecting you with the finest flame-grilled food. Authentic BBQ, real smoke, and unforgettable flavor — served with heart since 2010.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-btn" aria-label="Twitter"><i class="fi fi-brands-twitter-alt" style="font-style:normal;color:inherit;"></i></a>
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fi fi-brands-instagram" style="font-style:normal;color:inherit;"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fi fi-brands-linkedin" style="font-style:normal;color:inherit;"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="reservation.html">Reservations</a></li>
+                    <li><a href="reservation.html">Event Catering</a></li>
+                    <li><a href="reservation.html">Private Dining</a></li>
+                    <li><a href="#"><span class="only">Gift Cards</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#" ><span class="only">Blog</span></a></li>
+                    <li><a href="#panel-careers"><span class="only">Careers</span></a></li>
+                    <li><a href="#panel-press"><span class="only">Press</span></a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BBQ Flame. All rights reserved.</p>
+            <div class="footer-terms">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

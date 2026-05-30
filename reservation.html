@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ — Reserve a Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="back.css">
+    <script src="back.js"></script>
+    
+    
+<base target="_blank">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+    <a href="#" class="logo">B<span class="logo-dot">B</span>Q</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="header-nav" id="headerNav">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#" class="active">Reserve</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</header>
+
+<!-- ── HERO ── -->
+<div class="res-hero">
+    <div class="embers" id="embers"></div>
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="ring ring-3"></div>
+    <div class="ring ring-4"></div>
+
+    <span class="hero-tag"><i class="ti ti-calendar-event"></i> Book Your Table</span>
+    <h1>Reserve Your<br><em>BBQ Experience</em></h1>
+    <p>Secure your seat at Lagos's finest BBQ destination. Whether it's a casual dinner or a grand celebration — we've got your fire covered.</p>
+
+    <div class="hero-pills">
+        <span class="hero-pill"><i class="ti ti-clock"></i> Mon–Sat 11am–10pm</span>
+        <span class="hero-pill"><i class="ti ti-map-pin"></i> Victoria Island, Lagos</span>
+        <span class="hero-pill"><i class="ti ti-users"></i> Groups up to 50 welcome</span>
+        <span class="hero-pill"><i class="ti ti-phone"></i> +234 801 234 5678</span>
+    </div>
+</div>
+
+<!-- ── STEPPER ── -->
+<div class="stepper-wrap">
+    <div class="stepper">
+        <div class="step active" id="s1">
+            <div class="step-num" id="sn1">1</div>
+            <div class="step-label">Details</div>
+        </div>
+        <div class="step" id="s2">
+            <div class="step-num" id="sn2">2</div>
+            <div class="step-label">Date & Time</div>
+        </div>
+        <div class="step" id="s3">
+            <div class="step-num" id="sn3">3</div>
+            <div class="step-label">Extras</div>
+        </div>
+        <div class="step" id="s4">
+            <div class="step-num" id="sn4">4</div>
+            <div class="step-label">Confirm</div>
+        </div>
+    </div>
+</div>
+
+<!-- ── MAIN BODY ── -->
+<div class="res-body">
+
+    <!-- FORM COL -->
+    <div class="form-col">
+
+        <!-- SUCCESS -->
+        <div class="success-screen panel-card" id="successScreen" style="padding:0;">
+            <div style="padding:60px 40px; text-align:center;">
+                <div class="success-icon">✓</div>
+                <h2>You're <em>Booked!</em></h2>
+                <p>Your table has been reserved. We've sent a confirmation to your email. We can't wait to serve you the finest BBQ in Lagos!</p>
+                <div class="success-ref" id="refCode">BBQ-000000</div>
+                <p style="font-size:.82rem;color:#aaa;margin-bottom:1.6rem;">Save this reference number — you'll need it at the door.</p>
+                <div class="success-actions">
+                    <button class="btn-next" onclick="location.reload()"><i class="ti ti-calendar-plus"></i> New Reservation</button>
+                    <button class="btn-back" style="border-color:var(--green-base);color:var(--green-base);" onclick="window.print()"><i class="ti ti-printer"></i> Print</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 1 — Guest Details -->
+        <div class="form-panel active" id="panel1">
+            <div class="panel-card">
+                <div class="panel-head">
+                    <div class="panel-icon"><i class="ti ti-user"></i></div>
+                    <div>
+                        <h2>Your Details</h2>
+                        <p>Tell us who we'll be expecting</p>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label>First Name</label>
+                            <div class="input-wrap">
+                                <input type="text" id="fname" placeholder="e.g. Amara" autocomplete="given-name">
+                                <i class="ti ti-user input-icon"></i>
+                            </div>
+                            <div class="field-error" id="e-fname">Please enter your first name.</div>
+                        </div>
+                        <div class="field-group">
+                            <label>Last Name</label>
+                            <div class="input-wrap">
+                                <input type="text" id="lname" placeholder="e.g. Kalu" autocomplete="family-name">
+                                <i class="ti ti-user input-icon"></i>
+                            </div>
+                            <div class="field-error" id="e-lname">Please enter your last name.</div>
+                        </div>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label>Email Address</label>
+                            <div class="input-wrap">
+                                <input type="email" id="email" placeholder="you@example.com" autocomplete="email">
+                                <i class="ti ti-mail input-icon"></i>
+                            </div>
+                            <div class="field-error" id="e-email">Please enter a valid email.</div>
+                        </div>
+                        <div class="field-group">
+                            <label>Phone Number</label>
+                            <div class="input-wrap">
+                                <input type="tel" id="phone" placeholder="+234 801 234 5678" autocomplete="tel">
+                                <i class="ti ti-phone input-icon"></i>
+                            </div>
+                            <div class="field-error" id="e-phone">Please enter your phone number.</div>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Number of Guests</label>
+                        <div class="counter">
+                            <button class="counter-btn" onclick="changeGuests(-1)">−</button>
+                            <div class="counter-val" id="guestVal">2</div>
+                            <button class="counter-btn" onclick="changeGuests(1)">+</button>
+                        </div>
+                        <p class="field-hint">Max 50 guests. For large groups call us directly.</p>
+                    </div>
+
+                    <div class="field-group" style="margin-bottom:0;">
+                        <label>Occasion</label>
+                        <div class="occasion-chips" id="occasionChips">
+                            <div class="chip sel-chip" data-val="casual" onclick="selectChip(this)"><i class="ti ti-flame"></i> Casual Dining</div>
+                            <div class="chip" data-val="birthday"   onclick="selectChip(this)"><i class="ti ti-cake"></i> Birthday</div>
+                            <div class="chip" data-val="date"       onclick="selectChip(this)"><i class="ti ti-heart"></i> Date Night</div>
+                            <div class="chip" data-val="corporate"  onclick="selectChip(this)"><i class="ti ti-briefcase"></i> Corporate</div>
+                            <div class="chip" data-val="wedding"    onclick="selectChip(this)"><i class="ti ti-rings-wedding"></i> Wedding</div>
+                            <div class="chip" data-val="other"      onclick="selectChip(this)"><i class="ti ti-dots"></i> Other</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-nav">
+                <div></div>
+                <button class="btn-next" onclick="goStep(2)">
+                    Date &amp; Time <i class="ti ti-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- STEP 2 — Date & Time -->
+        <div class="form-panel" id="panel2">
+            <div class="panel-card">
+                <div class="panel-head">
+                    <div class="panel-icon"><i class="ti ti-calendar"></i></div>
+                    <div>
+                        <h2>Date &amp; Time</h2>
+                        <p>Choose when you'd like to visit</p>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label>Preferred Date</label>
+                            <div class="input-wrap">
+                                <input type="date" id="resDate" min="">
+                                <i class="ti ti-calendar input-icon"></i>
+                            </div>
+                            <div class="field-error" id="e-date">Please select a date.</div>
+                        </div>
+                        <div class="field-group">
+                            <label>Seating Area</label>
+                            <div class="input-wrap">
+                                <select id="seating">
+                                    <option value="">Choose a section…</option>
+                                    <option value="indoor">Indoor — Air-conditioned</option>
+                                    <option value="outdoor">Outdoor — Open terrace</option>
+                                    <option value="pit">Pit Side — Live grill view</option>
+                                    <option value="vip">VIP Lounge — Private room</option>
+                                    <option value="bar">Bar Area — Casual bar seating</option>
+                                </select>
+                                <i class="ti ti-armchair input-icon sel-arrow"></i>
+                            </div>
+                            <div class="field-error" id="e-seating">Please choose a seating area.</div>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Available Time Slots</label>
+                        <div class="time-grid" id="timeGrid">
+                            <div class="time-slot" data-time="11:00" onclick="selectTime(this)">11:00 AM<span class="slot-avail">7 left</span></div>
+                            <div class="time-slot" data-time="11:30" onclick="selectTime(this)">11:30 AM<span class="slot-avail">9 left</span></div>
+                            <div class="time-slot unavailable" data-time="12:00">12:00 PM<span class="slot-avail">Full</span></div>
+                            <div class="time-slot" data-time="12:30" onclick="selectTime(this)">12:30 PM<span class="slot-avail">3 left</span></div>
+                            <div class="time-slot" data-time="13:00" onclick="selectTime(this)">1:00 PM<span class="slot-avail">6 left</span></div>
+                            <div class="time-slot unavailable" data-time="13:30">1:30 PM<span class="slot-avail">Full</span></div>
+                            <div class="time-slot" data-time="14:00" onclick="selectTime(this)">2:00 PM<span class="slot-avail">8 left</span></div>
+                            <div class="time-slot" data-time="14:30" onclick="selectTime(this)">2:30 PM<span class="slot-avail">5 left</span></div>
+                            <div class="time-slot" data-time="18:00" onclick="selectTime(this)">6:00 PM<span class="slot-avail">4 left</span></div>
+                            <div class="time-slot" data-time="18:30" onclick="selectTime(this)">6:30 PM<span class="slot-avail">7 left</span></div>
+                            <div class="time-slot unavailable" data-time="19:00">7:00 PM<span class="slot-avail">Full</span></div>
+                            <div class="time-slot" data-time="19:30" onclick="selectTime(this)">7:30 PM<span class="slot-avail">2 left</span></div>
+                            <div class="time-slot" data-time="20:00" onclick="selectTime(this)">8:00 PM<span class="slot-avail">5 left</span></div>
+                            <div class="time-slot" data-time="20:30" onclick="selectTime(this)">8:30 PM<span class="slot-avail">6 left</span></div>
+                            <div class="time-slot" data-time="21:00" onclick="selectTime(this)">9:00 PM<span class="slot-avail">8 left</span></div>
+                            <div class="time-slot" data-time="21:30" onclick="selectTime(this)">9:30 PM<span class="slot-avail">9 left</span></div>
+                        </div>
+                        <div class="field-error" id="e-time">Please select a time slot.</div>
+                    </div>
+
+                    <div class="field-group" style="margin-bottom:0;">
+                        <label>Duration</label>
+                        <div class="input-wrap">
+                            <select id="duration">
+                                <option value="1.5">1.5 hours (Standard)</option>
+                                <option value="2"  selected>2 hours (Recommended)</option>
+                                <option value="3">3 hours (Leisurely)</option>
+                                <option value="4">4 hours (Event)</option>
+                            </select>
+                            <i class="ti ti-hourglass input-icon sel-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-nav">
+                <button class="btn-back" onclick="goStep(1)"><i class="ti ti-arrow-left"></i> Back</button>
+                <button class="btn-next" onclick="goStep(3)">Extras <i class="ti ti-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- STEP 3 — Extras -->
+        <div class="form-panel" id="panel3">
+            <div class="panel-card">
+                <div class="panel-head">
+                    <div class="panel-icon"><i class="ti ti-star"></i></div>
+                    <div>
+                        <h2>Extras &amp; Add-ons</h2>
+                        <p>Make your visit truly special</p>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="field-group">
+                        <label>Add-on Experiences</label>
+                        <div class="addons-grid" id="addonsGrid">
+                            <div class="addon-card" data-price="5000" data-name="Welcome Drinks" onclick="toggleAddon(this)">
+                                <div class="addon-check">✓</div>
+                                <div class="addon-info">
+                                    <strong>🥂 Welcome Drinks</strong>
+                                    <span>Chilled cocktail or mocktail on arrival</span>
+                                </div>
+                                <div class="addon-price">₦5k</div>
+                            </div>
+                            <div class="addon-card" data-price="8000" data-name="Birthday Decor" onclick="toggleAddon(this)">
+                                <div class="addon-check">✓</div>
+                                <div class="addon-info">
+                                    <strong>🎂 Birthday Decor</strong>
+                                    <span>Balloons, banner & candles</span>
+                                </div>
+                                <div class="addon-price">₦8k</div>
+                            </div>
+                            <div class="addon-card" data-price="12000" data-name="Live Music" onclick="toggleAddon(this)">
+                                <div class="addon-check">✓</div>
+                                <div class="addon-info">
+                                    <strong>🎸 Live Music Set</strong>
+                                    <span>45-min acoustic performance</span>
+                                </div>
+                                <div class="addon-price">₦12k</div>
+                            </div>
+                            <div class="addon-card" data-price="15000" data-name="Private Chef" onclick="toggleAddon(this)">
+                                <div class="addon-check">✓</div>
+                                <div class="addon-info">
+                                    <strong>👨‍🍳 Private Pitmaster</strong>
+                                    <span>Dedicated chef for your table</span>
+                                </div>
+                                <div class="addon-price">₦15k</div>
+                            </div>
+                            <div class="addon-card" data-price="6000" data-name="Photography" onclick="toggleAddon(this)">
+                                <div class="addon-check">✓</div>
+                                <div class="addon-info">
+                                    <strong>📸 Photography</strong>
+                                    <span>30-min table photography session</span>
+                                </div>
+                                <div class="addon-price">₦6k</div>
+                            </div>
+                            <div class="addon-card" data-price="3000" data-name="Dessert Platter" onclick="toggleAddon(this)">
+                                <div class="addon-check">✓</div>
+                                <div class="addon-info">
+                                    <strong>🍮 Dessert Platter</strong>
+                                    <span>Assorted BBQ-smoked desserts</span>
+                                </div>
+                                <div class="addon-price">₦3k</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Dietary Requirements</label>
+                        <div class="input-wrap">
+                            <select id="dietary">
+                                <option value="none">No special requirements</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="halal">Halal only</option>
+                                <option value="gluten-free">Gluten-free</option>
+                                <option value="nut-free">Nut-free</option>
+                                <option value="other">Other (specify below)</option>
+                            </select>
+                            <i class="ti ti-leaf input-icon sel-arrow"></i>
+                        </div>
+                    </div>
+
+                    <div class="field-group" style="margin-bottom:0;">
+                        <label>Special Requests or Notes</label>
+                        <div class="input-wrap">
+                            <textarea id="notes" placeholder="Allergies, special seating needs, surprise party instructions, high chair needed, etc."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-nav">
+                <button class="btn-back" onclick="goStep(2)"><i class="ti ti-arrow-left"></i> Back</button>
+                <button class="btn-next" onclick="goStep(4)">Review &amp; Confirm <i class="ti ti-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- STEP 4 — Confirm -->
+        <div class="form-panel" id="panel4">
+            <div class="panel-card">
+                <div class="panel-head">
+                    <div class="panel-icon" style="background:var(--green-mid);"><i class="ti ti-check"></i></div>
+                    <div>
+                        <h2>Confirm Reservation</h2>
+                        <p>Review everything before we lock it in</p>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- Review table -->
+                    <div id="reviewTable" style="margin-bottom:20px;"></div>
+
+                    <div class="policy-note">
+                        <i class="ti ti-info-circle"></i>
+                        <p>By confirming, you agree to our <a href="#">Reservation Policy</a>. Cancellations must be made at least 24 hours in advance. Late cancellations or no-shows may incur a ₦2,000 fee per guest. A confirmation email will be sent immediately.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-nav">
+                <button class="btn-back" onclick="goStep(3)"><i class="ti ti-arrow-left"></i> Back</button>
+                <button class="btn-next btn-confirm" id="confirmBtn" onclick="confirmReservation()">
+                    <i class="ti ti-flame"></i> Confirm Reservation
+                </button>
+            </div>
+        </div>
+
+    </div><!-- /form-col -->
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="summary-card">
+            <div class="summary-head">
+                <i class="ti ti-clipboard-list"></i>
+                <h3>Booking Summary</h3>
+            </div>
+            <div class="summary-body">
+                <div class="summary-row">
+                    <span class="sum-key">Name</span>
+                    <span class="sum-val" id="sum-name"><em class="empty">—</em></span>
+                </div>
+                <div class="summary-row">
+                    <span class="sum-key">Guests</span>
+                    <span class="sum-val" id="sum-guests">2 guests</span>
+                </div>
+                <div class="summary-row">
+                    <span class="sum-key">Occasion</span>
+                    <span class="sum-val" id="sum-occasion">Casual Dining</span>
+                </div>
+                <div class="summary-row">
+                    <span class="sum-key">Date</span>
+                    <span class="sum-val empty" id="sum-date">—</span>
+                </div>
+                <div class="summary-row">
+                    <span class="sum-key">Time</span>
+                    <span class="sum-val empty" id="sum-time">—</span>
+                </div>
+                <div class="summary-row">
+                    <span class="sum-key">Seating</span>
+                    <span class="sum-val empty" id="sum-seating">—</span>
+                </div>
+                <div class="summary-row">
+                    <span class="sum-key">Add-ons</span>
+                    <span class="sum-val" id="sum-addons"><em class="empty">None</em></span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Add-ons Total</span>
+                    <strong id="sum-total">₦0</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h4>📍 Find Us</h4>
+            <div class="info-item">
+                <i class="ti ti-map-pin"></i>
+                <span>12 Flame Street, Victoria Island, Lagos, Nigeria</span>
+            </div>
+            <div class="info-item">
+                <i class="ti ti-phone"></i>
+                <span>+234 801 234 5678</span>
+            </div>
+            <div class="info-item">
+                <i class="ti ti-mail"></i>
+                <span>hello@bbqflame.com</span>
+            </div>
+            <div class="info-item">
+                <i class="ti ti-clock"></i>
+                <span>Mon–Sat: 11am – 10pm<br>Sunday: 12pm – 8pm</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h4>🔥 Need Help?</h4>
+            <div class="info-item">
+                <i class="ti ti-users"></i>
+                <span>Large parties of 20+ people? Call us directly for custom arrangements.</span>
+            </div>
+            <div class="info-item">
+                <i class="ti ti-truck-delivery"></i>
+                <span>Need off-site catering? We deliver anywhere in Lagos.</span>
+            </div>
+        </div>
+
+    </div><!-- /sidebar -->
+
+</div><!-- /res-body -->
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#" class="logo">B<span>B</span>Q</a>
+                <p>Connecting you with the finest flame-grilled food. Authentic BBQ, real smoke, and unforgettable flavor — served with heart since 2010.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-btn" aria-label="Twitter"><i class="fi fi-brands-twitter-alt" style="font-style:normal;color:inherit;"></i></a>
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fi fi-brands-instagram" style="font-style:normal;color:inherit;"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fi fi-brands-linkedin" style="font-style:normal;color:inherit;"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    
+                    <li><a href="#"><span class="only">reservations</span></a></li>
+                    <li><a href="#"><span class="only">Event Catering</span></a></li>
+                    <li><a href="#"><span class="only">Private Dining</span></a></li>
+                    <li><a href="#"><span class="only">Gift Cards</span></a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html#panel-careers">Careers</a></li>
+                    <li><a href="blog.html#panel-press">Press</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BBQ Flame. All rights reserved.</p>
+            <div class="footer-terms">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

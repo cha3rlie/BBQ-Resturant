@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ — Flame & Flavor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css'>
+<link rel="stylesheet" href="back.css">
+<script src="back.js"></script>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">B<span>B</span>Q</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="main-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-inner">
+            <span class="hero-tag">🔥 Flame-Grilled Since 2010</span>
+            <h1>Real Smoke.<br>Real <em>Flavor.</em><br>Real BBQ.</h1>
+            <p>Wood-fired grills, slow-smoked meats, and bold spices — crafted with passion and served with pride. Every bite tells a story.</p>
+            <div class="hero-btns">
+                <button class="btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">Explore Menu</button>
+                <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Reserve a Table</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years of BBQ</div></div>
+        <div class="stat"><div class="stat-num">120K+</div><div class="stat-label">Happy Guests</div></div>
+        <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Menu Items</div></div>
+        <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Avg Rating</div></div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="top-view-meat-kebab-with-potatoes-grilled-vegetables-with-sauce-board.jpg" alt="Our BBQ spread" onerror="this.style.background='linear-gradient(135deg,#2e7d32,#1a4d1a)';this.style.display='block'">
+        </div>
+        <div class="about-text">
+            <span class="section-tag">Our Story</span>
+            <h2 class="section-h">Born From Fire.<br>Built on Flavor.</h2>
+            <p>What started as a backyard passion project has grown into the neighborhood's most beloved BBQ destination. We believe great barbecue is about patience — slow smoke, quality cuts, and the kind of care you can taste in every bite.</p>
+            <p>Our pitmasters have spent years perfecting the craft, sourcing premium cuts, and blending signature spice rubs that keep our regulars coming back week after week.</p>
+            <div class="about-features">
+                <div class="feature-item">Premium Wood Smoke</div>
+                <div class="feature-item">Free-Range Meats</div>
+                <div class="feature-item">House-Made Rubs</div>
+                <div class="feature-item">Secret BBQ Sauce</div>
+                <div class="feature-item">Farm-Fresh Sides</div>
+                <div class="feature-item">Catering Available</div>
+            </div>
+            <div style="margin-top:2rem;">
+                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book an Event</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-section" id="menu">
+        <div class="section-header">
+            <span class="section-tag">Our Menu</span>
+            <h2 class="section-h">Signature Dishes</h2>
+            <p>From slow-smoked ribs to flame-kissed kebabs — every dish is a labor of love from our pit to your plate.</p>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-card-img-placeholder"><img src="download.jfif"> </div>
+                <div class="menu-card-body">
+                    <h3>BBQ Beef Ribs</h3>
+                    <p>12-hour slow-smoked beef ribs with our house dry rub, served with coleslaw and pickles.</p>
+                </div>
+                <div class="menu-card-footer">
+                    <span class="price">$24</span>
+                    <button class="order-btn">Order</button>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-img-placeholder"><img src="download (1).jfif"> </div>
+                <div class="menu-card-body">
+                    <h3>Grilled Kebab Platter</h3>
+                    <p>Marinated lamb and beef skewers over charcoal, with flatbread, hummus, and herb salad.</p>
+                </div>
+                <div class="menu-card-footer">
+                    <span class="price">$19</span>
+                    <button class="order-btn">Order</button>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-img-placeholder"><img src="download (2).jfif"> </div>
+                <div class="menu-card-body">
+                    <h3>Smoked Half Chicken</h3>
+                    <p>Brined overnight and smoked low-and-slow with hickory wood. Juicy, tender, unforgettable.</p>
+                </div>
+                <div class="menu-card-footer">
+                    <span class="price">$17</span>
+                    <button class="order-btn">Order</button>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-img-placeholder"><img src="This Rolling Grill Basket Makes BBQ Veggies Easy (No More Falling Through the Grates).jfif"> </div>
+                <div class="menu-card-body">
+                    <h3>Veggie Grill Basket</h3>
+                    <p>Seasonal vegetables chargrilled with olive oil, herbs, and a drizzle of our signature sauce.</p>
+                </div>
+                <div class="menu-card-footer">
+                    <span class="price">$13</span>
+                    <button class="order-btn">Order</button>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-img-placeholder"><img src="Keto Air Fryer Pork Belly Bites (Sweet + Spicy, Ultra Crispy).jfif"> </div>
+                <div class="menu-card-body">
+                    <h3>Pork Belly Bites</h3>
+                    <p>Crispy-edged, melt-in-your-mouth smoked pork belly with sweet chili dipping sauce.</p>
+                </div>
+                <div class="menu-card-footer">
+                    <span class="price">$15</span>
+                    <button class="order-btn">Order</button>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-img-placeholder"><img src="BBQ Ranch Turkey Smash Burger.jfif"></div>
+                
+                <div class="menu-card-body">
+                    <h3>Pitmaster Burger</h3>
+                    <p>Double smash patty, aged cheddar, bacon jam, pickled onions, and our smoky house sauce.</p>
+                </div>
+                <div class="menu-card-footer">
+                    <span class="price">$16</span>
+                    <button class="order-btn">Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-us">
+        <div class="section-header">
+            <span class="section-tag">Why Choose Us</span>
+            <h2 class="section-h">The BBQ Difference</h2>
+            <p>We don't cut corners. Here's what sets our BBQ apart from the rest.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">🔥</div>
+                <h3>Authentic Smoke</h3>
+                <p>Real wood, real fire, real smoke. No shortcuts — just the time-honoured tradition of low-and-slow smoking.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🌿</div>
+                <h3>Fresh Ingredients</h3>
+                <p>We source locally farmed produce and ethically raised meats to bring you the freshest possible BBQ.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">👨‍🍳</div>
+                <h3>Expert Pitmasters</h3>
+                <p>Our team has decades of combined BBQ experience, competing in and winning regional championships.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🎉</div>
+                <h3>Events & Catering</h3>
+                <p>From backyard birthdays to corporate events — we bring the full BBQ experience right to your venue.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+        <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+            <h2 class="section-h">What Our Guests Say</h2>
+            <p>Don't just take our word for it — here's what keeps our regulars coming back.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>The beef ribs are absolutely insane. I've tried BBQ across three countries and this place sits at the very top. The smoke ring alone is a work of art.</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">AK</div>
+                    <div>
+                        <div class="reviewer-name">Amara Kalu</div>
+                        <div class="reviewer-location">Lagos, Nigeria</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Ordered the kebab platter for our company lunch — everyone was blown away. The pitmasters really know their craft. Will definitely be back for catering.</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">JO</div>
+                    <div>
+                        <div class="reviewer-name">James Okoye</div>
+                        <div class="reviewer-location">Abuja, Nigeria</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>The smoked chicken melts off the bone. I've been coming here every Friday for two months straight. Best decision I made this year. Highly recommend!</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">FI</div>
+                    <div>
+                        <div class="reviewer-name">Fatima Ibrahim</div>
+                        <div class="reviewer-location">Port Harcourt, Nigeria</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <div class="section-header">
+            <span class="section-tag">Gallery</span>
+            <h2 class="section-h">From the Pit to the Plate</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="font-size:4rem;"><img src="download (1).jfif"></div>
+            <div class="gallery-item"><img src="download.jfif"></div>
+            <div class="gallery-item"><img src="download (2).jfif"></div>
+            <div class="gallery-item"><img src="Keto Air Fryer Pork Belly Bites (Sweet + Spicy, Ultra Crispy).jfif"></div>
+            <div class="gallery-item"><img src="This Rolling Grill Basket Makes BBQ Veggies Easy (No More Falling Through the Grates).jfif"></div>
+        </div>
+       
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-h">Reserve a Table<br>or Plan an Event</h2>
+                <p>Whether you're booking for two or planning a full catering spread for 200, we'd love to hear from you. Reach out and let's make it happen.</p>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-detail-text">
+                        <strong>Location</strong>
+                        <span>12 Flame Street, Victoria Island, Lagos</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-detail-text">
+                        <strong>Phone</strong>
+                        <span>+234 801 234 5678</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon">🕐</div>
+                    <div class="contact-detail-text">
+                        <strong>Opening Hours</strong>
+                        <span>Mon–Sat: 11am – 10pm &nbsp;|&nbsp; Sun: 12pm – 8pm</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-detail-text">
+                        <strong>Email</strong>
+                        <span>hello@bbqflame.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone Number">
+                    <input type="date">
+                </div>
+                <select>
+                    <option value="" disabled selected>Purpose of Visit</option>
+                    <option>Dine-In Reservation</option>
+                    <option>Private Event / Birthday</option>
+                    <option>Corporate Catering</option>
+                    <option>Wedding Catering</option>
+                    <option>General Inquiry</option>
+                </select>
+                <textarea placeholder="Tell us more about your needs — party size, dietary requirements, etc."></textarea>
+                <button type="button">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter">
+        <h2>Get Deals & BBQ Updates 🔥</h2>
+        <p>Join our mailing list for weekly specials, new menu drops, and event announcements.</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email address">
+            <button type="button">Subscribe</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#" class="logo">B<span>B</span>Q</a>
+                <p>Connecting you with the finest flame-grilled food. Authentic BBQ, real smoke, and unforgettable flavor — served with heart since 2010.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-btn" aria-label="Twitter"><i class="fi fi-brands-twitter-alt" style="font-style:normal;color:inherit;"></i></a>
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fi fi-brands-instagram" style="font-style:normal;color:inherit;"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fi fi-brands-linkedin" style="font-style:normal;color:inherit;"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="reservation.html">Reservations</a></li>
+                    <li><a href="reservation.html">Event Catering</a></li>
+                    <li><a href="reservation.html">Private Dining</a></li>
+                    <li><a href="#"><span class="only">Gift Cards</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html#panel-careers">Careers</a></li>
+                    <li><a href="blog.html#panel-press">Press</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BBQ Flame. All rights reserved.</p>
+            <div class="footer-terms">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    
+</body>
+</html>
