@@ -1,4 +1,94 @@
-           
+         /* ============================================================
+   PASTE THIS AT THE VERY BOTTOM OF YOUR style.css
+   This overrides all conflicting hamburger rules above
+   ============================================================ */
+
+/* Always hide hamburger on desktop */
+.hamburger {
+    display: none !important;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 101;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+@media (max-width: 700px) {
+
+    /* Show hamburger button */
+    .hamburger {
+        display: flex !important;
+    }
+
+    /* Make header a flex column so nav drops below logo */
+    header {
+        flex-wrap: wrap;
+        height: auto !important;
+        padding: 14px 20px !important;
+        position: relative;
+    }
+
+    /* ── index.html: nav#main-nav with class .nav ── */
+    .nav {
+        display: none;
+        width: 100%;
+        background: #1a4d1a;  /* var(--green) */
+        padding: 8px 0 14px;
+        order: 3;
+    }
+    .nav.open {
+        display: block !important;
+    }
+    .nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    .nav a {
+        display: block;
+        padding: 11px 20px;
+        border-radius: 0;
+        font-size: 0.9rem;
+    }
+
+    /* ── reservation.html & blog.html: nav#headerNav with class .header-nav ── */
+    .header-nav {
+        display: none !important;
+        flex-direction: column;
+        gap: 4px;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: #0e2206;  /* var(--green-dark) */
+        padding: 12px 20px 16px;
+        z-index: 100;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .header-nav.open {
+        display: flex !important;
+    }
+    .header-nav a {
+        width: 100%;
+        text-align: center;
+        padding: 12px 14px;
+        border-radius: 4px;
+    }
+}  
            
 
         :root {
@@ -20,7 +110,7 @@
 
         html { scroll-behavior: smooth; }
 
-        body {
+        body 
             background: var(--cream);
             font-family: 'Lato', sans-serif;
             color: var(--dark);

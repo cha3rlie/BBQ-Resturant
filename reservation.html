@@ -9,17 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    
-    
-<base target="_blank">
+    <!-- ✅ script.js removed from here -->
 </head>
 <body>
 
 <!-- ── HEADER ── -->
 <header>
-    <a href="#" class="logo">B<span class="logo-dot">B</span>Q</a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <a href="index.html" class="logo">B<span class="logo-dot">B</span>Q</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
     </button>
     <ul class="header-nav" id="headerNav">
@@ -27,6 +24,7 @@
         <li><a href="index.html#menu">Menu</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="#" class="active">Reserve</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="index.html#contact">Contact</a></li>
     </ul>
 </header>
@@ -166,12 +164,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="form-nav">
                 <div></div>
-                <button class="btn-next" onclick="goStep(2)">
-                    Date &amp; Time <i class="ti ti-arrow-right"></i>
-                </button>
+                <button class="btn-next" onclick="goStep(2)">Date &amp; Time <i class="ti ti-arrow-right"></i></button>
             </div>
         </div>
 
@@ -240,7 +235,7 @@
                         <div class="input-wrap">
                             <select id="duration">
                                 <option value="1.5">1.5 hours (Standard)</option>
-                                <option value="2"  selected>2 hours (Recommended)</option>
+                                <option value="2" selected>2 hours (Recommended)</option>
                                 <option value="3">3 hours (Leisurely)</option>
                                 <option value="4">4 hours (Event)</option>
                             </select>
@@ -249,7 +244,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="form-nav">
                 <button class="btn-back" onclick="goStep(1)"><i class="ti ti-arrow-left"></i> Back</button>
                 <button class="btn-next" onclick="goStep(3)">Extras <i class="ti ti-arrow-right"></i></button>
@@ -272,50 +266,32 @@
                         <div class="addons-grid" id="addonsGrid">
                             <div class="addon-card" data-price="5000" data-name="Welcome Drinks" onclick="toggleAddon(this)">
                                 <div class="addon-check">✓</div>
-                                <div class="addon-info">
-                                    <strong>🥂 Welcome Drinks</strong>
-                                    <span>Chilled cocktail or mocktail on arrival</span>
-                                </div>
+                                <div class="addon-info"><strong>🥂 Welcome Drinks</strong><span>Chilled cocktail or mocktail on arrival</span></div>
                                 <div class="addon-price">₦5k</div>
                             </div>
                             <div class="addon-card" data-price="8000" data-name="Birthday Decor" onclick="toggleAddon(this)">
                                 <div class="addon-check">✓</div>
-                                <div class="addon-info">
-                                    <strong>🎂 Birthday Decor</strong>
-                                    <span>Balloons, banner & candles</span>
-                                </div>
+                                <div class="addon-info"><strong>🎂 Birthday Decor</strong><span>Balloons, banner & candles</span></div>
                                 <div class="addon-price">₦8k</div>
                             </div>
                             <div class="addon-card" data-price="12000" data-name="Live Music" onclick="toggleAddon(this)">
                                 <div class="addon-check">✓</div>
-                                <div class="addon-info">
-                                    <strong>🎸 Live Music Set</strong>
-                                    <span>45-min acoustic performance</span>
-                                </div>
+                                <div class="addon-info"><strong>🎸 Live Music Set</strong><span>45-min acoustic performance</span></div>
                                 <div class="addon-price">₦12k</div>
                             </div>
                             <div class="addon-card" data-price="15000" data-name="Private Chef" onclick="toggleAddon(this)">
                                 <div class="addon-check">✓</div>
-                                <div class="addon-info">
-                                    <strong>👨‍🍳 Private Pitmaster</strong>
-                                    <span>Dedicated chef for your table</span>
-                                </div>
+                                <div class="addon-info"><strong>👨‍🍳 Private Pitmaster</strong><span>Dedicated chef for your table</span></div>
                                 <div class="addon-price">₦15k</div>
                             </div>
                             <div class="addon-card" data-price="6000" data-name="Photography" onclick="toggleAddon(this)">
                                 <div class="addon-check">✓</div>
-                                <div class="addon-info">
-                                    <strong>📸 Photography</strong>
-                                    <span>30-min table photography session</span>
-                                </div>
+                                <div class="addon-info"><strong>📸 Photography</strong><span>30-min table photography session</span></div>
                                 <div class="addon-price">₦6k</div>
                             </div>
                             <div class="addon-card" data-price="3000" data-name="Dessert Platter" onclick="toggleAddon(this)">
                                 <div class="addon-check">✓</div>
-                                <div class="addon-info">
-                                    <strong>🍮 Dessert Platter</strong>
-                                    <span>Assorted BBQ-smoked desserts</span>
-                                </div>
+                                <div class="addon-info"><strong>🍮 Dessert Platter</strong><span>Assorted BBQ-smoked desserts</span></div>
                                 <div class="addon-price">₦3k</div>
                             </div>
                         </div>
@@ -345,7 +321,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="form-nav">
                 <button class="btn-back" onclick="goStep(2)"><i class="ti ti-arrow-left"></i> Back</button>
                 <button class="btn-next" onclick="goStep(4)">Review &amp; Confirm <i class="ti ti-arrow-right"></i></button>
@@ -363,16 +338,13 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <!-- Review table -->
                     <div id="reviewTable" style="margin-bottom:20px;"></div>
-
                     <div class="policy-note">
                         <i class="ti ti-info-circle"></i>
-                        <p>By confirming, you agree to our <a href="#">Reservation Policy</a>. Cancellations must be made at least 24 hours in advance. Late cancellations or no-shows may incur a ₦2,000 fee per guest. A confirmation email will be sent immediately.</p>
+                        <p>By confirming, you agree to our <a href="#">Reservation Policy</a>. Cancellations must be made at least 24 hours in advance. Late cancellations or no-shows may incur a ₦2,000 fee per guest.</p>
                     </div>
                 </div>
             </div>
-
             <div class="form-nav">
                 <button class="btn-back" onclick="goStep(3)"><i class="ti ti-arrow-left"></i> Back</button>
                 <button class="btn-next btn-confirm" id="confirmBtn" onclick="confirmReservation()">
@@ -385,42 +357,19 @@
 
     <!-- SIDEBAR -->
     <div class="sidebar">
-
         <div class="summary-card">
             <div class="summary-head">
                 <i class="ti ti-clipboard-list"></i>
                 <h3>Booking Summary</h3>
             </div>
             <div class="summary-body">
-                <div class="summary-row">
-                    <span class="sum-key">Name</span>
-                    <span class="sum-val" id="sum-name"><em class="empty">—</em></span>
-                </div>
-                <div class="summary-row">
-                    <span class="sum-key">Guests</span>
-                    <span class="sum-val" id="sum-guests">2 guests</span>
-                </div>
-                <div class="summary-row">
-                    <span class="sum-key">Occasion</span>
-                    <span class="sum-val" id="sum-occasion">Casual Dining</span>
-                </div>
-                <div class="summary-row">
-                    <span class="sum-key">Date</span>
-                    <span class="sum-val empty" id="sum-date">—</span>
-                </div>
-                <div class="summary-row">
-                    <span class="sum-key">Time</span>
-                    <span class="sum-val empty" id="sum-time">—</span>
-                </div>
-                <div class="summary-row">
-                    <span class="sum-key">Seating</span>
-                    <span class="sum-val empty" id="sum-seating">—</span>
-                </div>
-                <div class="summary-row">
-                    <span class="sum-key">Add-ons</span>
-                    <span class="sum-val" id="sum-addons"><em class="empty">None</em></span>
-                </div>
-
+                <div class="summary-row"><span class="sum-key">Name</span><span class="sum-val" id="sum-name"><em class="empty">—</em></span></div>
+                <div class="summary-row"><span class="sum-key">Guests</span><span class="sum-val" id="sum-guests">2 guests</span></div>
+                <div class="summary-row"><span class="sum-key">Occasion</span><span class="sum-val" id="sum-occasion">Casual Dining</span></div>
+                <div class="summary-row"><span class="sum-key">Date</span><span class="sum-val empty" id="sum-date">—</span></div>
+                <div class="summary-row"><span class="sum-key">Time</span><span class="sum-val empty" id="sum-time">—</span></div>
+                <div class="summary-row"><span class="sum-key">Seating</span><span class="sum-val empty" id="sum-seating">—</span></div>
+                <div class="summary-row"><span class="sum-key">Add-ons</span><span class="sum-val" id="sum-addons"><em class="empty">None</em></span></div>
                 <div class="summary-total">
                     <span>Add-ons Total</span>
                     <strong id="sum-total">₦0</strong>
@@ -430,97 +379,73 @@
 
         <div class="info-card">
             <h4>📍 Find Us</h4>
-            <div class="info-item">
-                <i class="ti ti-map-pin"></i>
-                <span>12 Flame Street, Victoria Island, Lagos, Nigeria</span>
-            </div>
-            <div class="info-item">
-                <i class="ti ti-phone"></i>
-                <span>+234 801 234 5678</span>
-            </div>
-            <div class="info-item">
-                <i class="ti ti-mail"></i>
-                <span>hello@bbqflame.com</span>
-            </div>
-            <div class="info-item">
-                <i class="ti ti-clock"></i>
-                <span>Mon–Sat: 11am – 10pm<br>Sunday: 12pm – 8pm</span>
-            </div>
+            <div class="info-item"><i class="ti ti-map-pin"></i><span>12 Flame Street, Victoria Island, Lagos, Nigeria</span></div>
+            <div class="info-item"><i class="ti ti-phone"></i><span>+234 801 234 5678</span></div>
+            <div class="info-item"><i class="ti ti-mail"></i><span>hello@bbqflame.com</span></div>
+            <div class="info-item"><i class="ti ti-clock"></i><span>Mon–Sat: 11am – 10pm<br>Sunday: 12pm – 8pm</span></div>
         </div>
 
         <div class="info-card">
             <h4>🔥 Need Help?</h4>
-            <div class="info-item">
-                <i class="ti ti-users"></i>
-                <span>Large parties of 20+ people? Call us directly for custom arrangements.</span>
-            </div>
-            <div class="info-item">
-                <i class="ti ti-truck-delivery"></i>
-                <span>Need off-site catering? We deliver anywhere in Lagos.</span>
-            </div>
+            <div class="info-item"><i class="ti ti-users"></i><span>Large parties of 20+ people? Call us directly for custom arrangements.</span></div>
+            <div class="info-item"><i class="ti ti-truck-delivery"></i><span>Need off-site catering? We deliver anywhere in Lagos.</span></div>
         </div>
-
     </div><!-- /sidebar -->
 
 </div><!-- /res-body -->
 
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-top">
-            <div class="footer-brand">
-                <a href="#" class="logo">B<span>B</span>Q</a>
-                <p>Connecting you with the finest flame-grilled food. Authentic BBQ, real smoke, and unforgettable flavor — served with heart since 2010.</p>
-                <div class="footer-socials">
-                    <a href="#" class="social-btn" aria-label="Twitter"><i class="fi fi-brands-twitter-alt" style="font-style:normal;color:inherit;"></i></a>
-                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fi fi-brands-instagram" style="font-style:normal;color:inherit;"></i></a>
-                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fi fi-brands-linkedin" style="font-style:normal;color:inherit;"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#menu">Our Menu</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    
-                    <li><a href="#"><span class="only">reservations</span></a></li>
-                    <li><a href="#"><span class="only">Event Catering</span></a></li>
-                    <li><a href="#"><span class="only">Private Dining</span></a></li>
-                    <li><a href="#"><span class="only">Gift Cards</span></a></li>
-                    
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="blog.html#panel-careers">Careers</a></li>
-                    <li><a href="blog.html#panel-press">Press</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">B<span>B</span>Q</a>
+            <p>Connecting you with the finest flame-grilled food. Authentic BBQ, real smoke, and unforgettable flavor — served with heart since 2010.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-btn" aria-label="Twitter"><i class="fi fi-brands-twitter-alt" style="font-style:normal;color:inherit;"></i></a>
+                <a href="#" class="social-btn" aria-label="Instagram"><i class="fi fi-brands-instagram" style="font-style:normal;color:inherit;"></i></a>
+                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fi fi-brands-linkedin" style="font-style:normal;color:inherit;"></i></a>
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 BBQ Flame. All rights reserved.</p>
-            <div class="footer-terms">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a>
-            </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#menu">Our Menu</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+            </ul>
         </div>
-    </footer>
+        <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#"><span class="only">Reservations</span></a></li>
+                <li><a href="#"><span class="only">Event Catering</span></a></li>
+                <li><a href="#"><span class="only">Private Dining</span></a></li>
+                <li><a href="#"><span class="only">Gift Cards</span></a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html">Careers</a></li>
+                <li><a href="blog.html">Press</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 BBQ Flame. All rights reserved.</p>
+        <div class="footer-terms">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
 
+<!-- ✅ script.js loaded HERE — after all elements exist -->
+<script src="script.js"></script>
 
 </body>
 </html>
